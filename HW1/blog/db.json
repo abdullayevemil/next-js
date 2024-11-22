@@ -1,0 +1,81 @@
+{
+    "categories": [
+      { "id": 1, "name": "Tech" },
+      { "id": 2, "name": "Health" },
+      { "id": 3, "name": "Travel" },
+      { "id": 4, "name": "Lifestyle" }
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "title": "Exploring the Latest in AI",
+        "description": "A deep dive into artificial intelligence advancements.",
+        "text": "Artificial Intelligence (AI) is revolutionizing industries worldwide. From automating tasks to improving decision-making, AI is reshaping our future. Businesses are investing heavily in AI research and development. This technology holds the potential to solve some of the world's most challenging problems.",
+        "categoryId": 1
+      },
+      {
+        "id": 2,
+        "title": "Top 10 Healthy Eating Habits",
+        "description": "Simple tips to maintain a balanced diet.",
+        "text": "Healthy eating is essential for maintaining physical and mental well-being. Incorporating fruits and vegetables into your meals can improve your overall health. Avoiding processed foods and sugary drinks is a key step toward a better diet. Remember, hydration is just as important as the food you eat.",
+        "categoryId": 2
+      },
+      {
+        "id": 3,
+        "title": "Must-Visit Destinations in 2024",
+        "description": "Explore the best travel destinations for the upcoming year.",
+        "text": "Traveling broadens your perspective and enriches your life. In 2024, exciting new destinations await eager explorers. From pristine beaches to bustling cities, there's something for everyone. Don't forget to immerse yourself in local cultures and cuisines along the way.",
+        "categoryId": 3
+      },
+      {
+        "id": 4,
+        "title": "Designing a Minimalist Home",
+        "description": "Transform your space into a modern, minimalist haven.",
+        "text": "Minimalism is about simplicity and functionality. A minimalist home promotes a sense of peace and clarity. Reducing clutter and focusing on essentials can transform any living space. It's not just a design choice; it's a lifestyle shift toward intentional living.",
+        "categoryId": 4
+      },
+      {
+        "id": 5,
+        "title": "Cybersecurity Trends",
+        "description": "How to stay secure in an increasingly digital world.",
+        "text": "Cybersecurity is becoming more crucial as technology advances. Hackers are constantly finding new ways to breach systems. Companies must adopt cutting-edge tools to protect sensitive information. Staying informed about trends can help individuals safeguard their data too.",
+        "categoryId": 1
+      },
+      {
+        "id": 6,
+        "title": "Meditation for Beginners",
+        "description": "Step-by-step guide to starting your meditation practice.",
+        "text": "Meditation is a practice that promotes relaxation and focus. Beginners can start with just a few minutes each day. Consistency is key to building a lasting meditation habit. Over time, it can significantly reduce stress and improve overall well-being.",
+        "categoryId": 2
+      },
+      {
+        "id": 7,
+        "title": "Budget-Friendly Travel Tips",
+        "description": "How to travel the world without breaking the bank.",
+        "text": "Traveling on a budget doesn't mean missing out on experiences. Look for deals on flights and accommodations to save money. Exploring local attractions can be affordable and rewarding. Always plan ahead to maximize your travel budget effectively.",
+        "categoryId": 3
+      },
+      {
+        "id": 8,
+        "title": "Building Your Morning Routine",
+        "description": "Create a productive start to your day.",
+        "text": "A great morning routine sets the tone for the rest of your day. Start with small, manageable habits like drinking water or stretching. Avoid checking your phone first thing in the morning. Over time, a structured routine can boost productivity and focus.",
+        "categoryId": 4
+      },
+      {
+        "id": 9,
+        "title": "The Future of Blockchain",
+        "description": "Exploring blockchain's impact on industries.",
+        "text": "Blockchain technology is redefining how we handle data. Its decentralized nature enhances security and transparency. Industries like finance and healthcare are already leveraging blockchain's potential. The future of blockchain holds even more transformative possibilities.",
+        "categoryId": 1
+      },
+      {
+        "id": 10,
+        "title": "The Benefits of Regular Exercise",
+        "description": "Why staying active is crucial for your health.",
+        "text": "Exercise is essential for maintaining physical and mental health. It boosts energy levels and improves mood. Regular workouts can help prevent chronic diseases. No matter your fitness level, there are exercises suitable for everyone.",
+        "categoryId": 2
+      }
+    ]
+  }
+  
