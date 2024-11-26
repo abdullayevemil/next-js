@@ -2,21 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-export default function Categories() {
-  const [categories, setCategories] = useState([]);
-
-  useEffect(() => {
-    try {
-      (async () => {
-        const response = await axios.get("http://localhost:4000/categories");
-  
-        setCategories(response.data);
-      })();
-    } catch (error) {
-      console.log(error)
-    }
-  }, []);
-
+export default function Categories({ categories }) {
   return (
     <div>
       <h1>Categories: </h1>
@@ -34,4 +20,14 @@ export default function Categories() {
       </ul>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const res = await axios.get("http://localhost:4000/categories");
+
+  return {
+    props: {
+      categories: res.data,
+    },
+  };
 }
