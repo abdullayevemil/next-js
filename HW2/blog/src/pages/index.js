@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function Categories({ categories }) {
@@ -29,5 +28,6 @@ export async function getStaticProps() {
     props: {
       categories: res.data,
     },
+    revalidate: 10,
   };
 }

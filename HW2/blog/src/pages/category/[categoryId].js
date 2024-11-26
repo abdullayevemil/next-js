@@ -1,33 +1,7 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import NotFound from "./[...slug]";
 
-export default function CategoryDetails({ categoryId }) {
-  const [category, setCategory] = useState({});
-
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    try {
-      (async () => {
-        const categoryResponse = await axios.get(
-          `http://localhost:4000/categories?id=${categoryId}`
-        );
-
-        setCategory(categoryResponse.data[0]);
-
-        const postsResponse = await axios.get(
-          `http://localhost:4000/posts?categoryId=${categoryId}`
-        );
-
-        setPosts(postsResponse.data);
-      })();
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
-
+export default function CategoryDetails({ category, posts }) {
   return (
     <div>
       {category && posts ? (
@@ -40,7 +14,7 @@ export default function CategoryDetails({ categoryId }) {
             {posts.map(({ id, title }) => {
               return (
                 <li key={id}>
-                  <Link href={`/category/${categoryId}/post/${id}`}>
+                  <Link href={`/category/${category.id}/post/${id}`}>
                     {title}
                   </Link>
                 </li>
@@ -55,10 +29,38 @@ export default function CategoryDetails({ categoryId }) {
   );
 }
 
-export async function getServerSideProps({ query }) {
+export async function getStaticPaths() {
+  const categoriesResponse = await axios.get(
+    `http://localhost:4000/categories`
+  );
+
+  const paths = categoriesResponse.data.map((category) => {
+    return {
+      params: {
+        categoryId:  `${category.id}`,
+      }
+    }
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const categoryResponse = await axios.get(
+    `http://localhost:4000/categories?id=${params.categoryId}`
+  );
+
+  const postsResponse = await axios.get(
+    `http://localhost:4000/posts?categoryId=${params.categoryId}`
+  );
+
   return {
     props: {
-      categoryId: query.categoryId,
+      category: categoryResponse.data,
+      posts: postsResponse.data,
     },
   };
 }
